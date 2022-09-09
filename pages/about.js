@@ -1,5 +1,5 @@
-import React from 'react'
+import Hero from 'components/hero'
 
 export default function About() {
-  return <div>about</div>
+  return <Hero title="About" subtitle="aboutページ" />
 }
