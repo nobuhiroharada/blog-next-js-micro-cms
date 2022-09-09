@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Header = () => {
+export default function Header() {
   return <header>HEADER</header>
 }
