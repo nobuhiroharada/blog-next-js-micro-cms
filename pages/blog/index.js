@@ -1,5 +1,10 @@
 import Hero from 'components/hero'
+import Container from 'components/Container'
 
 export default function Blog() {
-  return <Hero title="Blog" subtitle="blogページ" />
+  return (
+    <Container>
+      <Hero title="Blog" subtitle="blogページ" />
+    </Container>
+  )
 }
