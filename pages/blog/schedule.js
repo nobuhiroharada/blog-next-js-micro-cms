@@ -9,6 +9,7 @@ import {
 } from 'components/Two-column'
 import ConvertBody from 'components/convert-body'
 import Image from 'next/image'
+import { getPlaiceholder } from 'plaiceholder'
 import PostCategories from 'components/post-categories'
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
@@ -43,6 +44,8 @@ export default function Schedule({
             height={eyecatch.height}
             sizes="(min-width: 1152px) 1152px, 100vw"
             priority
+            placeholder="blur"
+            blurDataURL={eyecatch.blurDataURL}
           />
           <TwoColumn>
             <TwoColumnMain>
@@ -65,6 +68,8 @@ export async function getStaticProps() {
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
   const eyecatch = post.eyecatch ?? eyecatchLocal
+  const { base64 } = await getPlaiceholder(eyecatch.url)
+  eyecatch.blurDataURL = base64
   return {
     props: {
       title: post.title,
