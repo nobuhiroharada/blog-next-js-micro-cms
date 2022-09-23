@@ -7,7 +7,7 @@ import {
   TwoColumn,
   TwoColumnMain,
   TwoColumnSidebar,
-} from 'components/Two-column'
+} from 'components/two-column'
 import eyecatch from 'images/about.jpg'
 import Meta from 'components/meta'
 import Accordion from 'components/accordion'

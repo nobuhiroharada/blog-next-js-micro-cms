@@ -6,7 +6,7 @@ import {
   TwoColumn,
   TwoColumnMain,
   TwoColumnSidebar,
-} from 'components/Two-column'
+} from 'components/two-column'
 import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
 import Meta from 'components/meta'
