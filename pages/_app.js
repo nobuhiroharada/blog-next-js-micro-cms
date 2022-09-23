@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import 'styles/globals.css'
-import Layout from 'components/layout'
+import Layout from 'components/layout.js'
 import Script from 'next/script'
 import * as gtag from 'lib/gtag'
 
