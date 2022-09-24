@@ -20,3 +20,14 @@
   padding: revert;
   list-style: revert;
 }
+
+.stack pre {
+  color: white;
+  background-color: black;
+  overflow: auto;
+}
+
+.stack a {
+  color: #0000ee;
+  text-decoration: underline;
+}
