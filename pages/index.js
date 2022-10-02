@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <Container>
       <Meta />
-      <Hero title="CUBE" subtitle="アウトプットしていく" imageOn />
+      <Hero title="CUBE" subtitle="アウトプットしていく" />
       <Posts posts={posts} />
       <Pagination nextUrl="/blog" nextText="More Posts" />
     </Container>
