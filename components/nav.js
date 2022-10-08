@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Link from 'next/link'
 
@@ -12,6 +13,8 @@ export default function Nav() {
     setNavIsOpen(false)
   }
 
+  const router = useRouter()
+
   return (
     <nav className="w-full bg-white shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -19,7 +22,7 @@ export default function Nav() {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/">
               <a>
-                <h2 className="text-2xl font-bold">nobuhara</h2>
+                <h2 className="text-2xl font-bold">nobuhara&apos;s blog</h2>
               </a>
             </Link>
             <div className="md:hidden">
@@ -67,17 +70,35 @@ export default function Nav() {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="hover:text-gray-500">
+              <li
+                className={
+                  router.pathname == '/'
+                    ? 'text-gray-400'
+                    : 'hover:text-gray-400'
+                }
+              >
                 <Link href="/">
                   <a onClick={closeNav}>Home</a>
                 </Link>
               </li>
-              <li className="hover:text-gray-500">
+              <li
+                className={
+                  router.pathname == '/about'
+                    ? 'text-gray-400'
+                    : 'hover:text-gray-400'
+                }
+              >
                 <Link href="/about">
                   <a onClick={closeNav}>About</a>
                 </Link>
               </li>
-              <li className="hover:text-gray-500">
+              <li
+                className={
+                  router.pathname == '/blog'
+                    ? 'text-gray-400'
+                    : 'hover:text-gray-400'
+                }
+              >
                 <Link href="/blog">
                   <a onClick={closeNav}>Blog</a>
                 </Link>
