@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <nav className="w-full bg-white shadow">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <div className="justify-between px-5 mx-auto max-w-4xl md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/">
