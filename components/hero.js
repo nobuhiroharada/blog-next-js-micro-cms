@@ -1,11 +1,8 @@
-import styles from 'styles/hero.module.css'
-
-export default function Hero({ title, subtitle }) {
+export default function Hero({ title }) {
   return (
-    <div className={styles.flexContainer}>
-      <div className={styles.text}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.subtitle}>{subtitle}</p>
+    <div className="pt-5">
+      <div className="">
+        <h1 className="text-5xl font-bold">{title}</h1>
       </div>
     </div>
   )

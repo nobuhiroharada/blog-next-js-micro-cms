@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Hero from 'components/hero'
 import Container from 'components/container'
 import PostBody from 'components/post-body'
@@ -8,31 +7,14 @@ import {
   TwoColumnMain,
   TwoColumnSidebar,
 } from 'components/two-column'
-import eyecatch from 'images/about.jpg'
 import Meta from 'components/meta'
 import Accordion from 'components/accordion'
 
 export default function About() {
   return (
     <Container>
-      <Meta
-        pageTitle="アバウト"
-        pageDesc="About development activities"
-        pageImg={eyecatch.src}
-        pageImgW={eyecatch.width}
-        pageImgH={eyecatch.height}
-      />
+      <Meta pageTitle="アバウト" pageDesc="About development activities" />
       <Hero title="About" subtitle="aboutページ" />
-      <figure>
-        <Image
-          src={eyecatch}
-          alt=""
-          layout="responsive"
-          sizes="(min-width: 1152px) 1152px, 100vw"
-          priority
-          placeholder="blur"
-        />
-      </figure>
       <TwoColumn>
         <TwoColumnMain>
           <PostBody>
