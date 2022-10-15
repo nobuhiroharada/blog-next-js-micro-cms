@@ -1,4 +1,3 @@
-import styles from 'styles/social.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTwitter,
@@ -6,24 +5,26 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 
-export default function Social({ iconSize = 'initial' }) {
+export default function Social() {
   return (
-    <ul className={styles.list} style={{ '--icon-size': iconSize }}>
+    <ul className="flex gap-6 text-2xl">
       <li>
-        <a href="https://twitter.com">
-          <FontAwesomeIcon icon={faTwitter} />
-          <span className="sr-only">Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://facebook.com">
-          <FontAwesomeIcon icon={faFacebookF} />
+        <a
+          href="https://www.facebook.com/nobuhiroharada1026"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebookF} className="hover:text-gray-400" />
           <span className="sr-only">Facebook</span>
         </a>
       </li>
       <li>
-        <a href="https://github.com">
-          <FontAwesomeIcon icon={faGithub} />
+        <a
+          href="https://github.com/nobuhiroharada"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} className="hover:text-gray-400" />
           <span className="sr-only">Github</span>
         </a>
       </li>

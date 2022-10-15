@@ -1,5 +1,3 @@
-import styles from 'styles/container.module.css'
-
-export default function Container({ children, large = false }) {
-  return <div className={large ? styles.large : styles.default}>{children}</div>
+export default function Container({ children }) {
+  return <div className="max-w-4xl mx-auto p-5">{children}</div>
 }
