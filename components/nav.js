@@ -92,7 +92,7 @@ export default function Nav() {
                   <a onClick={closeNav}>About</a>
                 </Link>
               </li>
-              <li
+              {/* <li
                 className={
                   router.pathname == '/blog'
                     ? 'text-gray-400'
@@ -102,7 +102,7 @@ export default function Nav() {
                 <Link href="/blog">
                   <a onClick={closeNav}>Blog</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
