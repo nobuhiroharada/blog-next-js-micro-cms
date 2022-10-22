@@ -1,4 +1,3 @@
-import styles from 'styles/pagination.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -13,23 +12,23 @@ export default function Pagination({
   nextUrl = '',
 }) {
   return (
-    <ul className={styles.flexContainer}>
+    <ul className="flex justify-between">
       {prevText && prevUrl && (
-        <li className={styles.prev}>
+        <li className="px-2">
           <Link href={prevUrl}>
-            <a className={styles.iconText}>
-              <FontAwesomeIcon icon={faChevronLeft} color="var(--gray-25)" />
-              <span>{prevText}</span>
+            <a className="hover:text-gray-400">
+              <FontAwesomeIcon icon={faChevronLeft} />
+              <span className="ml-2">{prevText}</span>
             </a>
           </Link>
         </li>
       )}
       {nextText && nextUrl && (
-        <li className={styles.next}>
+        <li className="ml-auto px-2">
           <Link href={nextUrl}>
-            <a className={styles.iconText}>
-              <span>{nextText}</span>
-              <FontAwesomeIcon icon={faChevronRight} color="var(--gray-25)" />
+            <a className="hover:text-gray-400">
+              <span className="mr-2">{nextText}</span>
+              <FontAwesomeIcon icon={faChevronRight} />
             </a>
           </Link>
         </li>
