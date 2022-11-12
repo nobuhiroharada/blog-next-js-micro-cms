@@ -12,11 +12,11 @@ export default function Pagination({
   nextUrl = '',
 }) {
   return (
-    <ul className="flex justify-between">
+    <ul className="flex justify-between mt-14 md:mt-28">
       {prevText && prevUrl && (
         <li className="px-2">
           <Link href={prevUrl}>
-            <a className="hover:text-gray-400">
+            <a className="text-gray-500 hover:text-gray-400">
               <FontAwesomeIcon icon={faChevronLeft} />
               <span className="ml-2">{prevText}</span>
             </a>
@@ -26,7 +26,7 @@ export default function Pagination({
       {nextText && nextUrl && (
         <li className="ml-auto px-2">
           <Link href={nextUrl}>
-            <a className="hover:text-gray-400">
+            <a className="text-gray-500 hover:text-gray-400">
               <span className="mr-2">{nextText}</span>
               <FontAwesomeIcon icon={faChevronRight} />
             </a>

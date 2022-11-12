@@ -1,19 +1,18 @@
-import styles from 'styles/post-categories.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 
 export default function PostCategories({ categories }) {
   return (
-    <div className={styles.flexContainer}>
-      <h3 className={styles.heading}>
-        <FontAwesomeIcon icon={faFolderOpen} />
+    <div className="flex flex-row gap-2 items-baseline md:flex-col text-gray-500">
+      <h3 className="">
+        <FontAwesomeIcon icon={faFolderOpen} size="lg" />
       </h3>
-      <ul className={styles.list}>
+      <ul className="flex flex-row gap-2 items-baseline md:flex-col">
         {categories.map(({ name, slug }) => (
           <li key={slug}>
             <Link href={`/blog/category/${slug}`}>
-              <a>{name}</a>
+              <a className="hover:text-gray-400">{name}</a>
             </Link>
           </li>
         ))}

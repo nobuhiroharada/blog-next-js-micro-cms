@@ -12,6 +12,14 @@
   --stack-space: 0.8em;
 }
 
+.stack h2 {
+  font-size: 1.5em;
+}
+
+.stack h3 {
+  font-size: 1.3em;
+}
+
 .stack p {
   line-height: 1.8;
 }
