@@ -1,13 +1,12 @@
 import Logo from 'components/logo'
 import Container from 'components/container'
-import styles from 'styles/footer.module.css'
 import Social from './social'
 
 export default function Footer() {
   return (
-    <footer className={styles.wrapper}>
+    <footer className="py-20 bg-gray-200">
       <Container>
-        <div className={styles.flexContainer}>
+        <div className="flex flex-col gap-4 items-center text-center md:flex-row md:justify-between">
           <Logo />
           <Social />
         </div>
