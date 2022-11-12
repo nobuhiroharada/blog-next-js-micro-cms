@@ -1,6 +1,6 @@
 export function TwoColumn({ children }) {
   return (
-    <div className="flex flex-col md:flex-row md:justify-between gap-12 mt-10 mb-10">
+    <div className="flex flex-col md:flex-row md:justify-between gap-12 mt-10 md:mt-20">
       {children}
     </div>
   )

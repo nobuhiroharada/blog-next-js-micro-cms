@@ -12,7 +12,7 @@ export default function PostCategories({ categories }) {
         {categories.map(({ name, slug }) => (
           <li key={slug}>
             <Link href={`/blog/category/${slug}`}>
-              <a>{name}</a>
+              <a className="hover:text-gray-400">{name}</a>
             </Link>
           </li>
         ))}
