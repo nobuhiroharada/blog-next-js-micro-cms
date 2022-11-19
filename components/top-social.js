@@ -36,11 +36,23 @@ export default function TopSocial() {
       href: 'mailto:nobuhiroharada@hotmail.com',
       style: 'rounded-br-md',
     },
+    // {
+    //   id: 4,
+    //   child: (
+    //     <>
+    //       Resume
+    //       <BsFillPersonLinesFill size={30} />
+    //     </>
+    //   ),
+    //   href: '/resume.pdf',
+    //   style: 'rounded-br-md',
+    //   download: true,
+    // },
   ]
   return (
     <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
       <ul>
-        {links.map(({ id, child, href, style }) => (
+        {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
             className={
@@ -54,6 +66,7 @@ export default function TopSocial() {
               className="flex justify-between items-center w-full text-white"
               target="_blank"
               rel="noreferrer"
+              download={download}
             >
               {child}
             </a>
