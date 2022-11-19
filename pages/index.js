@@ -1,6 +1,7 @@
 import Container from 'components/container'
 import Meta from 'components/meta'
 import Top from 'components/top'
+import TopSocial from 'components/top-social'
 import Posts from 'components/posts'
 import Pagination from 'components/pagination'
 import { getAllPosts } from 'lib/api'
@@ -12,6 +13,7 @@ export default function Home({ posts }) {
     <Container>
       <Meta />
       <Top />
+      <TopSocial />
       <Posts posts={posts} />
       <Pagination nextUrl="/blog" nextText="More Posts" />
     </Container>
