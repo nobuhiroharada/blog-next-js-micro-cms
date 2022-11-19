@@ -1,4 +1,4 @@
-import Social from './social'
+import Social from './social-footer'
 
 export default function Contact() {
   return (

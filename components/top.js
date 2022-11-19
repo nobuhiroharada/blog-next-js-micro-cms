@@ -4,9 +4,9 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
 export default function Top() {
   return (
-    <div name="home" className="h-screen w-full ">
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 mt-10 md:mt-20 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
+    <div name="home" className="w-full px-4 mt-28 md:mt-32">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center md:flex-row">
+        <div className="flex flex-col justify-center">
           <h2 className="text-4xl md:text-7xl font-bold text-slate-800">
             I&apos;m a web application developer
           </h2>
@@ -22,7 +22,7 @@ export default function Top() {
             </button>
           </div>
         </div>
-        <div className="mx-auto w-2/3 md:w-full">
+        <div className="mx-auto w-2/3 md:w-full md:mt-5">
           <Image
             src={TopImage}
             alt=""
