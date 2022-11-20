@@ -37,8 +37,7 @@ export default function Post({
         pageImgW={eyecatch.width}
         pageImgH={eyecatch.height}
       />
-      <article>
-        <PostHeader title={title} publish={publish} />
+      <article className="mt-20">
         <figure>
           <Image
             key={eyecatch.url}
@@ -52,6 +51,7 @@ export default function Post({
             placeholder="blur"
             blurDataURL={eyecatch.blurDataURL}
           />
+          <PostHeader title={title} publish={publish} />
           <TwoColumn>
             <TwoColumnMain>
               <PostBody>

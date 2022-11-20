@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
 export default function Top() {
   return (
-    <div name="home" className="w-full px-4 mt-28 md:mt-32">
+    <div name="top" className="w-full px-4 mt-28 md:mt-32">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center md:flex-row">
         <div className="flex flex-col justify-center">
           <h2 className="text-4xl md:text-7xl font-bold text-slate-800">

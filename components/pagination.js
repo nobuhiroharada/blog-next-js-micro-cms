@@ -16,7 +16,7 @@ export default function Pagination({
       {prevText && prevUrl && (
         <li className="px-2">
           <Link href={prevUrl}>
-            <a className="text-gray-500 hover:text-gray-400">
+            <a className="text-slate-400 hover:text-slate-800">
               <FontAwesomeIcon icon={faChevronLeft} />
               <span className="ml-2">{prevText}</span>
             </a>
@@ -26,7 +26,7 @@ export default function Pagination({
       {nextText && nextUrl && (
         <li className="ml-auto px-2">
           <Link href={nextUrl}>
-            <a className="text-gray-500 hover:text-gray-400">
+            <a className="text-slate-400 hover:text-slate-800">
               <span className="mr-2">{nextText}</span>
               <FontAwesomeIcon icon={faChevronRight} />
             </a>
