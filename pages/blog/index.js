@@ -2,6 +2,7 @@ import Hero from 'components/hero'
 import Container from 'components/container'
 import Meta from 'components/meta'
 import Posts from 'components/posts'
+import SocialLeft from 'components/social-left'
 import { getAllPosts } from 'lib/api'
 import { eyecatchLocal } from 'lib/constants'
 import { getPlaiceholder } from 'plaiceholder'
@@ -11,6 +12,7 @@ export default function Blog({ posts }) {
     <Container>
       <Meta pageTitle="ブログ一覧" pageDesc="ブログの記事一覧" />
       <Posts posts={posts} />
+      <SocialLeft />
     </Container>
   )
 }

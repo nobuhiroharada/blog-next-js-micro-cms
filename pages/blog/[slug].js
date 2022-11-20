@@ -11,6 +11,7 @@ import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
 import Meta from 'components/meta'
 import Pagination from 'components/pagination'
+import SocialLeft from 'components/social-left'
 import Image from 'next/image'
 import { getPlaiceholder } from 'plaiceholder'
 import { extractText } from 'lib/extract-text'
@@ -70,6 +71,7 @@ export default function Post({
           nextUrl={`/blog/${nextPost.slug}`}
         />
       </article>
+      <SocialLeft />
     </Container>
   )
 }

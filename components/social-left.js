@@ -2,7 +2,7 @@ import { FaGithub, FaFacebookF } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
-export default function TopSocial() {
+export default function SocialLeft() {
   const links = [
     {
       id: 1,

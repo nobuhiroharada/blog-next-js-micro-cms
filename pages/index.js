@@ -1,7 +1,7 @@
 import Container from 'components/container'
 import Meta from 'components/meta'
 import Top from 'components/top'
-import SocialTop from 'components/social-top'
+import SocialLeft from 'components/social-left'
 import Experience from 'components/Experience'
 import Posts from 'components/posts'
 import Pagination from 'components/pagination'
@@ -18,7 +18,7 @@ export default function Home({ posts }) {
       <Experience />
       <Posts posts={posts} />
       <Pagination nextUrl="/blog" nextText="More Posts" />
-      <SocialTop />
+      <SocialLeft />
     </Container>
   )
 }

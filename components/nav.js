@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { siteMeta } from 'lib/constants'
-import Navitems from './nav-items'
+import Navitems from 'components/nav-items'
 
 export default function Nav() {
   const router = useRouter()
 
   return (
-    <nav className="flex justify-between items-center w-full h-20 px-6 md:px-16 bg-slate-50 text-slate-800 fixed z-50">
+    <nav className="flex justify-between items-center w-full h-20 px-6 lg:px-32 bg-slate-50 text-slate-800 fixed z-50">
       <div>
         <h1 className="text-2xl font-bold ml-2">
           <Link href="/">{siteMeta.siteTitle}</Link>
