@@ -5,7 +5,7 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 
-export default function Social() {
+export default function SocialFooter() {
   return (
     <ul className="flex gap-6 text-2xl">
       <li>
@@ -14,7 +14,10 @@ export default function Social() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faFacebookF} className="hover:text-gray-400" />
+          <FontAwesomeIcon
+            icon={faFacebookF}
+            className="hover:text-slate-400"
+          />
           <span className="sr-only">Facebook</span>
         </a>
       </li>
@@ -24,7 +27,7 @@ export default function Social() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} className="hover:text-gray-400" />
+          <FontAwesomeIcon icon={faGithub} className="hover:text-slate-400" />
           <span className="sr-only">Github</span>
         </a>
       </li>

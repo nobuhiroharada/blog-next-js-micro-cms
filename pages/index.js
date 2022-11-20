@@ -1,5 +1,8 @@
 import Container from 'components/container'
 import Meta from 'components/meta'
+import Top from 'components/top'
+import SocialLeft from 'components/social-left'
+import Experience from 'components/experience'
 import Posts from 'components/posts'
 import Pagination from 'components/pagination'
 import { getAllPosts } from 'lib/api'
@@ -10,8 +13,12 @@ export default function Home({ posts }) {
   return (
     <Container>
       <Meta />
+      <Top />
+
+      <Experience />
       <Posts posts={posts} />
       <Pagination nextUrl="/blog" nextText="More Posts" />
+      <SocialLeft />
     </Container>
   )
 }
