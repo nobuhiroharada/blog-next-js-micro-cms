@@ -10,8 +10,6 @@ export default function Category({ name, posts }) {
   return (
     <Container>
       <Meta pageTitle={name} pageDesc={`${name}に関する記事`} />
-      {/* <PostHeader title={name} subtitle="Blog Category" /> */}
-      <h1 className="mt-10">{name}</h1>
       <Posts posts={posts} categoryName={name} />
     </Container>
   )
@@ -28,7 +26,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const categorySlug = context.params.slug
   const allCategories = await getAllCategories()
-  console.log(allCategories)
   const category = allCategories.find(({ slug }) => slug === categorySlug)
 
   const posts = await getPostsByCategoryId(category.id)

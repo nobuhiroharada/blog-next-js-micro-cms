@@ -6,9 +6,9 @@ export default function Posts({ posts, categoryName = '' }) {
   const router = useRouter()
 
   return (
-    <div name="blog" className="w-full mt-20">
+    <div name="blog" className="w-full mt-32">
       {router.pathname.match(/\/blog\/category/) ? (
-        <div className="text-center mb-5">
+        <div className="text-center mb-10">
           <p className="text-4xl font-bold border-b-2 border-slate-400 p-2 inline">
             {categoryName}に関する記事
           </p>
