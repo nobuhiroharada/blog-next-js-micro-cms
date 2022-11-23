@@ -53,6 +53,7 @@ export default function Post({
             blurDataURL={eyecatch.blurDataURL}
           />
           <PostHeader title={title} publish={publish} />
+          <PostCategories categories={categories} />
           <TwoColumn>
             <TwoColumnMain>
               <PostBody>
@@ -60,7 +61,7 @@ export default function Post({
               </PostBody>
             </TwoColumnMain>
             <TwoColumnSidebar>
-              <PostCategories categories={categories} />
+              {/* <PostCategories categories={categories} /> */}
             </TwoColumnSidebar>
           </TwoColumn>
         </figure>
