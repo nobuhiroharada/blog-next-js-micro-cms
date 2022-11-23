@@ -1,4 +1,4 @@
-import { getAllSlugs, getPostBySlug } from 'lib/api'
+import { getAllSlugs, getPostBySlug, getAllCategories } from 'lib/api'
 import Container from 'components/container'
 import PostHeader from 'components/post-header'
 import PostBody from 'components/post-body'
@@ -9,6 +9,7 @@ import {
 } from 'components/two-column'
 import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
+import BlogCategories from 'components/blog-categories'
 import Meta from 'components/meta'
 import Pagination from 'components/pagination'
 import SocialLeft from 'components/social-left'
@@ -24,10 +25,11 @@ export default function Post({
   publish,
   content,
   eyecatch,
-  categories,
+  postCategories,
   description,
   prevPost,
   nextPost,
+  blogCategories,
 }) {
   return (
     <Container>
@@ -53,6 +55,7 @@ export default function Post({
             blurDataURL={eyecatch.blurDataURL}
           />
           <PostHeader title={title} publish={publish} />
+          <PostCategories categories={postCategories} />
           <TwoColumn>
             <TwoColumnMain>
               <PostBody>
@@ -60,7 +63,7 @@ export default function Post({
               </PostBody>
             </TwoColumnMain>
             <TwoColumnSidebar>
-              <PostCategories categories={categories} />
+              <BlogCategories categories={blogCategories} />
             </TwoColumnSidebar>
           </TwoColumn>
         </figure>
@@ -95,16 +98,24 @@ export async function getStaticProps(context) {
   const allSlugs = await getAllSlugs()
   const { prevPost, nextPost } = prevNextPost(allSlugs, slug)
 
+  const blogCategories = await getAllCategories()
+  blogCategories.sort((a, b) => {
+    if (a.name < b.name) return -1
+    if (a.name > b.name) return 1
+    return 0
+  })
+
   return {
     props: {
       title: post.title,
       publish: post.publishDate,
       content: post.content,
       eyecatch: eyecatch,
-      categories: post.categories,
+      postCategories: post.categories,
       description: description,
       prevPost: prevPost,
       nextPost: nextPost,
+      blogCategories: blogCategories,
     },
   }
 }

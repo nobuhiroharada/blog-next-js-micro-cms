@@ -56,7 +56,7 @@ export default function SocialLeft() {
           <li
             key={id}
             className={
-              'flex justify-between items-center w-40 h-14 pl-8 pr-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-slate-400' +
+              'flex justify-between items-center w-40 h-14 pl-8 pr-4 ml-[-100px] duration-300 bg-slate-400 hover:ml-[-10px] hover:rounded-md hover:bg-slate-600' +
               ' ' +
               style
             }
