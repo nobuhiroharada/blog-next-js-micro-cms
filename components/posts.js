@@ -19,7 +19,7 @@ export default function Posts({
     <div name="blog" className="w-full mt-32">
       {router.pathname.match(/\/blog\/category/) ? (
         <div className="text-center mb-10">
-          <p className="text-4xl font-bold border-b-2 border-slate-400 p-2 inline">
+          <p className="text-2xl md:text-4xl font-bold border-b-2 border-slate-400 p-2 inline">
             {categoryName}に関する記事
           </p>
           <p className="py-6 text-slate-400">The blogs I&apos;ve written.</p>
